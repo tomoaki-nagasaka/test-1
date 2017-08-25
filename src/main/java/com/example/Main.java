@@ -61,10 +61,8 @@ public class Main {
       //stmt.executeUpdate("INSERT INTO ticks VALUES (now())");
       ResultSet rs = stmt.executeQuery("SELECT * FROM botlog");
 
-      ArrayList<String> output = new ArrayList<String>();
-      while (rs.next()) {
-        output.add(rs);
-      }
+
+        output.add(rs)
 
       model.put("records", output);
       return "db";
