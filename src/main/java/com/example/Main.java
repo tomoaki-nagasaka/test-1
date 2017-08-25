@@ -59,11 +59,11 @@ public class Main {
       Statement stmt = connection.createStatement();
       //stmt.executeUpdate("CREATE TABLE IF NOT EXISTS ticks (tick timestamp)");
       //stmt.executeUpdate("INSERT INTO ticks VALUES (now())");
-      ResultSet rs = stmt.executeQuery("SELECT RETURN FROM botlog");
+      ResultSet rs = stmt.executeQuery("SELECT NO FROM botlog");
       
       ArrayList<String> output = new ArrayList<String>();
       while (rs.next()) {
-        output.add("Read from DB: " + rs);
+        output.add("Read from DB: " + rs.getString("NO"));
       }
 
       model.put("records", output);
