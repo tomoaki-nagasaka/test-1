@@ -60,9 +60,11 @@ public class Main {
       //stmt.executeUpdate("CREATE TABLE IF NOT EXISTS ticks (tick timestamp)");
       //stmt.executeUpdate("INSERT INTO ticks VALUES (now())");
       ResultSet rs = stmt.executeQuery("SELECT * FROM botlog");
-
-
-        output.add(rs)
+      
+      ArrayList<String> output = new ArrayList<String>();
+      while (rs.next()) {
+        output.add("Read from DB: " + rs.getTimestamp("tick"));
+      }
 
       model.put("records", output);
       return "db";
