@@ -72,7 +72,7 @@ public class Main {
 			.invalidateHttpSession(true).permitAll();
 		}
 
-		@Autowired
+		//@Autowired
 		/*public void configureGlobal(AuthenticationManagerBuilder auth) throws Exception {
 			auth
 			.inMemoryAuthentication()
@@ -89,7 +89,7 @@ public class Main {
 						"select custid, password  from userdata where custid = ?,password = ?")
 				//.authoritiesByUsernameQuery(
 				//"select mail_address, role from userdata where custid = ?,password = ?")
-				.passwordEncoder(new ShaPasswordEncoder(256));
+				//.passwordEncoder(new ShaPasswordEncoder(256));
 			}
 		}
 
