@@ -86,7 +86,7 @@ public class Main {
 				auth.jdbcAuthentication()
 				.dataSource(dataSource)
 				.usersByUsernameQuery(
-						"select custid, password  from userdata where custid = ?,password = ?")
+						"select custid, password  from userdata where custid = ?,password = ?");
 				//.authoritiesByUsernameQuery(
 				//"select mail_address, role from userdata where custid = ?,password = ?")
 				//.passwordEncoder(new ShaPasswordEncoder(256));
