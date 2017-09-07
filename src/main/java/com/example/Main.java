@@ -80,6 +80,7 @@ public class Main {
 		}*/
 		//
 		@Configuration
+		@Autowired
 		public class SecurityConfig extends WebSecurityConfigurerAdapter {
 
 			public void configAuthentication(AuthenticationManagerBuilder auth) throws Exception {
