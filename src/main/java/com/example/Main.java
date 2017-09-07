@@ -59,7 +59,7 @@ public class Main {
 			http
 			.authorizeRequests()
 			.antMatchers("/", "/login").permitAll()
-			.antMatchers("/**").hasRole("USER")
+			.antMatchers("/**","/login/**").hasRole("USER")
 			.antMatchers("/index/**").hasRole("ADMIN")
 			.and()
 			.formLogin()
