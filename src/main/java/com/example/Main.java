@@ -78,23 +78,21 @@ public class Main {
 			.inMemoryAuthentication()
 			.withUser("user").password("pass").roles("USER");
 		}*/
+//ログイン認証
+			@Configuration
+			public class SecurityConfig extends WebSecurityConfigurerAdapter {
 
-	}
-	//ログイン認証
-	@Configuration
-	@EnableWebMvcSecurity
-	public class SecurityConfig extends WebSecurityConfigurerAdapter {
-
-		public void configAuthentication(AuthenticationManagerBuilder auth) throws Exception {
-	        auth.jdbcAuthentication()
-	                .dataSource(dataSource)
-	                .usersByUsernameQuery(
+			public void configAuthentication(AuthenticationManagerBuilder auth) throws Exception {
+		        auth.jdbcAuthentication()
+	                	.dataSource(dataSource)
+	               	 .usersByUsernameQuery(
 	                        "select custid, password  from userdata where custid = ?,password = ?")
 	                //.authoritiesByUsernameQuery(
 	                        //"select mail_address, role from userdata where custid = ?,password = ?")
 	                .passwordEncoder(new ShaPasswordEncoder(256));
-	    }
-	}
+	  		}
+			}
+	
 
 
 
