@@ -78,7 +78,7 @@ public class Main {
 			.inMemoryAuthentication()
 			.withUser("user").password("pass").roles("USER");
 		}
-/*
+		/*
 		@Configuration
 		public class SecurityConfig extends WebSecurityConfigurerAdapter {
 
@@ -92,7 +92,7 @@ public class Main {
 				//.passwordEncoder(new ShaPasswordEncoder(256));
 			}
 		}
-*/
+		 */
 
 
 
