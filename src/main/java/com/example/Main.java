@@ -72,15 +72,14 @@ public class Main {
 			.invalidateHttpSession(true).permitAll();
 		}
 
-		//@Autowired
-		/*public void configureGlobal(AuthenticationManagerBuilder auth) throws Exception {
+		@Autowired
+		public void configureGlobal(AuthenticationManagerBuilder auth) throws Exception {
 			auth
 			.inMemoryAuthentication()
 			.withUser("user").password("pass").roles("USER");
-		}*/
-		//
+		}
+/*
 		@Configuration
-		@Autowired
 		public class SecurityConfig extends WebSecurityConfigurerAdapter {
 
 			public void configAuthentication(AuthenticationManagerBuilder auth) throws Exception {
@@ -93,7 +92,7 @@ public class Main {
 				//.passwordEncoder(new ShaPasswordEncoder(256));
 			}
 		}
-
+*/
 
 
 
