@@ -121,18 +121,18 @@ public class Main {
 		}
 
 		@RequestMapping("/Account")
-		String Account(Map<String, Object> model) {
-			try (Connection connection = dataSource.getConnection()) {
-				Statement stmt = connection.createStatement();
-				ResultSet rs = stmt.executeQuery("SELECT no,custid,password,authority FROM userdata ORDER BY NO");
+		String Account(Map<String, Object> mmodel) {
+			try (Connection mconnection = dataSource.getConnection()) {
+				Statement mstmt = connection.createStatement();
+				ResultSet mrs = stmt.executeQuery("SELECT custid,organame,authority FROM userdata ORDER BY NO");
 
-				ArrayList<String> output = new ArrayList<String>();
+				ArrayList<String> ooutput = new ArrayList<String>();
 				while (rs.next()) {
-					output.add(rs.getString("custid") + "  /  " + rs.getString("password"));
+					output.add(rs.getString("custid") + "  /  " + rs.getString("organame") + "  /  " + rs.getint("authority"));
 				}
 
-				model.put("records", output);
-				return "db";
+				model.put("records_user", output);
+				return "Account";
 			} catch (Exception e) {
 				model.put("message", e.getMessage());
 				return "error";
