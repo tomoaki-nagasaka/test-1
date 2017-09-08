@@ -123,11 +123,11 @@ public class Main {
 		@RequestMapping("/Account")
 		String Account(Map<String, Object> model) {
 			try (Connection cconnection = dataSource.getConnection()) {
-				Statement sstmt = connection.createStatement();
-				ResultSet rrs = sstmt.executeQuery("SELECT custid,organame,authority FROM userdata ORDER BY NO");
+				Statement stmt = connection.createStatement();
+				ResultSet rrs = stmt.executeQuery("SELECT custid,organame,authority FROM userdata ORDER BY NO");
 
 				ArrayList<String> ooutput = new ArrayList<String>();
-				while (rs.next()) {
+				while (rrs.next()) {
 					ooutput.add(rrs.getString("custid") + "  /  " + rrs.getString("organame") + "  /  " + rrs.getint("authority"));
 				}
 
