@@ -127,7 +127,7 @@ public class Main {
 				ResultSet rs = stmt.executeQuery("SELECT custid,organame,authority FROM userdata ORDER BY NO");
 
 				ArrayList<String> output = new ArrayList<String>();
-				while (rrs.next()) {
+				while (rs.next()) {
 					output.add(rs.getString("custid") + "  /  " + rs.getString("organame") + "  /  " + rs.getint("authority"));
 				}
 
