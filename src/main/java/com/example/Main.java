@@ -115,7 +115,7 @@ public class Main {
 
 			ArrayList<String> output = new ArrayList<String>();
 			while (rs.next()) {
-				output.add(rs.getString("custid") + "  /  " + rs.getString("organame") + "  /  " + rs.getString("authority"));
+				output.add(rs.getString("custid") + "  /  " + rs.getString("orgname") + "  /  " + rs.getString("authority"));
 			}
 
 			model.put("records_user", output);
