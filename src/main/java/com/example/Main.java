@@ -59,8 +59,7 @@ public class Main {
 			http
 			.authorizeRequests()
 			.antMatchers("/", "/login").permitAll()
-			.antMatchers("/**","/login/**").hasRole("USER")
-			//.antMatchers("/Account/**").hasRole("USER")
+			.antMatchers("/**").hasRole("USER")
 			.antMatchers("/index/**").hasRole("ADMIN")
 			.and()
 			.formLogin()
@@ -79,79 +78,44 @@ public class Main {
 			.inMemoryAuthentication()
 			.withUser("user").password("pass").roles("USER");
 		}
-		/*
-		@Configuration
-		public class SecurityConfig extends WebSecurityConfigurerAdapter {
-
-			public void configAuthentication(AuthenticationManagerBuilder auth) throws Exception {
-				auth.jdbcAuthentication()
-				.dataSource(dataSource)
-				.usersByUsernameQuery(
-						"select custid, password  from userdata where custid = ?,password = ?");
-				//.authoritiesByUsernameQuery(
-				//"select mail_address, role from userdata where custid = ?,password = ?")
-				//.passwordEncoder(new ShaPasswordEncoder(256));
-			}
-		}
-		 */
-
-
-
-		@RequestMapping("/Home")
-		String Menu() {
-			return "Home";
-		}
-
-		@RequestMapping("/db")
-		String db(Map<String, Object> model) {
-			try (Connection connection = dataSource.getConnection()) {
-				Statement stmt = connection.createStatement();
-				ResultSet rs = stmt.executeQuery("SELECT USERID,CONTENTS FROM botlog ORDER BY NO");
-
-				ArrayList<String> output = new ArrayList<String>();
-				while (rs.next()) {
-					output.add(rs.getString("USERID") + "  /  " + rs.getString("CONTENTS"));
-				}
-
-				model.put("records", output);
-				return "db";
-			} catch (Exception e) {
-				model.put("message", e.getMessage());
-				return "error";
-			}
-		}
-
-/*
-		@RequestMapping("/Account")
-		String Account(Map<String, Object> model) {
-			try (Connection connection = dataSource.getConnection()) {
-				Statement stmt = connection.createStatement();
-				ResultSet rs = stmt.executeQuery("SELECT custid,organame,authority FROM userdata ORDER BY NO");
-
-				ArrayList<String> output = new ArrayList<String>();
-				while (rs.next()) {
-					output.add(rs.getString("custid") + "  /  " + rs.getString("organame") + "  /  " + rs.getString("authority"));
-				}
-
-				model.put("records_user", output);
-				return "Account";
-			} catch (Exception e) {
-				model.put("message", e.getMessage());
-				return "error";
-			}
-		}
-*/
-
-		@Bean
-		public DataSource dataSource() throws SQLException {
-			if (dbUrl == null || dbUrl.isEmpty()) {
-				return new HikariDataSource();
-			} else {
-				HikariConfig config = new HikariConfig();
-				config.setJdbcUrl(dbUrl);
-				return new HikariDataSource(config);
-			}
-		}
 
 	}
+
+
+
+	@RequestMapping("/Home")
+	String Menu() {
+		return "Home";
+	}
+
+	@RequestMapping("/db")
+	String db(Map<String, Object> model) {
+		try (Connection connection = dataSource.getConnection()) {
+			Statement stmt = connection.createStatement();
+			ResultSet rs = stmt.executeQuery("SELECT USERID,CONTENTS FROM botlog ORDER BY NO");
+
+			ArrayList<String> output = new ArrayList<String>();
+			while (rs.next()) {
+				output.add(rs.getString("USERID") + "　/　" + rs.getString("CONTENTS"));
+			}
+
+			model.put("records", output);
+			return "db";
+		} catch (Exception e) {
+			model.put("message", e.getMessage());
+			return "error";
+		}
+	}
+
+	@Bean
+	public DataSource dataSource() throws SQLException {
+		if (dbUrl == null || dbUrl.isEmpty()) {
+			return new HikariDataSource();
+		} else {
+			HikariConfig config = new HikariConfig();
+			config.setJdbcUrl(dbUrl);
+			return new HikariDataSource(config);
+		}
+	}
+
 }
