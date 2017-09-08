@@ -122,19 +122,19 @@ public class Main {
 
 		@RequestMapping("/Account")
 		String Account(Map<String, Object> model) {
-			try (Connection connection1 = dataSource.getConnection()) {
-				Statement stmt1 = connection1.createStatement();
-				ResultSet rs1 = stmt1.executeQuery("SELECT custid,organame,authority FROM userdata ORDER BY NO");
+			try (Connection connection = dataSource.getConnection()) {
+				Statement stmt = connection.createStatement();
+				ResultSet rs = stmt.executeQuery("SELECT custid,organame,authority FROM userdata ORDER BY NO");
 
-				ArrayList<String> output1 = new ArrayList<String>();
+				ArrayList<String> output = new ArrayList<String>();
 				while (rrs.next()) {
-					output1.add(rs1.getString("custid") + "  /  " + rs1.getString("organame") + "  /  " + rs1.getint("authority"));
+					output.add(rs.getString("custid") + "  /  " + rs.getString("organame") + "  /  " + rs.getint("authority"));
 				}
 
-				model1.put("records_user", output1);
+				model.put("records_user", output);
 				return "Account";
 			} catch (Exception e) {
-				model1.put("message", e.getMessage());
+				model.put("message", e.getMessage());
 				return "error";
 			}
 		}
