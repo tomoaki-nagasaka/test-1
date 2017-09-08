@@ -120,7 +120,7 @@ public class Main {
 			}
 		}
 
-		@RequestMapping("/Account")
+		/*@RequestMapping("/Account")
 		String Account(Map<String, Object> model) {
 			try (Connection cconnection = dataSource.getConnection()) {
 				Statement stmt = connection.createStatement();
@@ -137,7 +137,7 @@ public class Main {
 				model.put("message", e.getMessage());
 				return "error";
 			}
-		}
+		}*/
 
 
 		@Bean
