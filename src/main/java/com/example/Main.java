@@ -120,24 +120,24 @@ public class Main {
 			}
 		}
 
-		/*@RequestMapping("/Account")
+		@RequestMapping("/Account")
 		String Account(Map<String, Object> model) {
-			try (Connection cconnection = dataSource.getConnection()) {
-				Statement stmt = connection.createStatement();
-				ResultSet rrs = stmt.executeQuery("SELECT custid,organame,authority FROM userdata ORDER BY NO");
+			try (Connection connection1 = dataSource.getConnection()) {
+				Statement stmt1 = connection1.createStatement();
+				ResultSet rs1 = stmt1.executeQuery("SELECT custid,organame,authority FROM userdata ORDER BY NO");
 
-				ArrayList<String> ooutput = new ArrayList<String>();
+				ArrayList<String> output1 = new ArrayList<String>();
 				while (rrs.next()) {
-					ooutput.add(rrs.getString("custid") + "  /  " + rrs.getString("organame") + "  /  " + rrs.getint("authority"));
+					output1.add(rs1.getString("custid") + "  /  " + rs1.getString("organame") + "  /  " + rs1.getint("authority"));
 				}
 
-				model.put("records_user", ooutput);
+				model1.put("records_user", output1);
 				return "Account";
 			} catch (Exception e) {
-				model.put("message", e.getMessage());
+				model1.put("message", e.getMessage());
 				return "error";
 			}
-		}*/
+		}
 
 
 		@Bean
