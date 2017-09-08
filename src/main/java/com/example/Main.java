@@ -60,6 +60,7 @@ public class Main {
 			.authorizeRequests()
 			.antMatchers("/", "/login").permitAll()
 			.antMatchers("/**","/login/**").hasRole("USER")
+			.antMatchers("/Account/**").hasRole("USER")
 			.antMatchers("/index/**").hasRole("ADMIN")
 			.and()
 			.formLogin()
@@ -119,6 +120,7 @@ public class Main {
 				return "error";
 			}
 		}
+
 
 		@RequestMapping("/Account")
 		String Account(Map<String, Object> model) {
