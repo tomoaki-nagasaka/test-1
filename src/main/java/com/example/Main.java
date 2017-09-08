@@ -107,6 +107,25 @@ public class Main {
 		}
 	}
 
+	@RequestMapping("/Account")
+	String Account(Map<String, Object> model) {
+		try (Connection connection = dataSource.getConnection()) {
+			Statement stmt = connection.createStatement();
+			ResultSet rs = stmt.executeQuery("SELECT custid,organame,authority FROM userdata ORDER BY NO");
+
+			ArrayList<String> output = new ArrayList<String>();
+			while (rs.next()) {
+				output.add(rs.getString("custid") + "  /  " + rs.getString("organame") + "  /  " + rs.getString("authority"));
+			}
+
+			model.put("records_user", output);
+			return "Account";
+		} catch (Exception e) {
+			model.put("message", e.getMessage());
+			return "error";
+		}
+	}
+
 	@Bean
 	public DataSource dataSource() throws SQLException {
 		if (dbUrl == null || dbUrl.isEmpty()) {
