@@ -91,7 +91,7 @@ public class Main {
 
 
 	@RequestMapping("/Signup")
-	String Menu() {
+	String Signup() {
 		return "Signup";
 	}
 
