@@ -91,7 +91,10 @@ public class Main {
 
 
 	@RequestMapping("/Signup")
-	String Signup(Map<String, Object> model) {
+	String Signup() {
+		return "Signup";
+
+	/*String Signup(Map<String, Object> model) {
 		try (Connection connection = dataSource.getConnection()) {
 			Statement stmt = connection.createStatement();
 			String sql = stmt.executeQuery("INSERT INTO userdata(custid,custname,orgname,password,roll) values(,,,,)");
@@ -99,7 +102,7 @@ public class Main {
 		}catch(Exception e) {
 			model.put("message", e.getMessage());
 			return "error";
-		}
+		}*/
 	}
 
 
