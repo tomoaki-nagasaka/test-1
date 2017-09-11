@@ -91,8 +91,12 @@ public class Main {
 
 
 	@RequestMapping("/Signup")
-	String Signup() {
-		return "Signup";
+	String Signup(Map<String, Object> model) {
+		try (Connection connection = dataSource.getConnection()) {
+			Statement stmt = connection.createStatement();
+			ResultSet rs = stmt.executeQuery("SELECT custid FROM userdata ORDER BY NO");
+
+		}
 	}
 
 
