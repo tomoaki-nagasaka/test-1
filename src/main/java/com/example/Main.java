@@ -88,6 +88,15 @@ public class Main {
 		return "Home";
 	}
 
+
+
+	@RequestMapping("/Signup")
+	String Menu() {
+		return "Signup";
+	}
+
+
+
 	@RequestMapping("/db")
 	String db(Map<String, Object> model) {
 		try (Connection connection = dataSource.getConnection()) {
