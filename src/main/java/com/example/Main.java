@@ -94,10 +94,16 @@ public class Main {
 	String Signup() {
 		return "Signup";
 
-	/*String Signup(Map<String, Object> model) {
+	/*String Signup(String custid,String username,String orgname,String password) {
+
+		this.custid = custId;
+		this.username = userName;
+		this.orgname = orgName;
+		this.password = passWord;
+
 		try (Connection connection = dataSource.getConnection()) {
 			Statement stmt = connection.createStatement();
-			String sql = stmt.executeQuery("INSERT INTO userdata(custid,custname,orgname,password,roll) values(,,,,)");
+			String sql = stmt.executeQuery("INSERT INTO userdata(custid,custname,orgname,password,roll) values(custId,userName,orgName,passWord,)");
 
 		}catch(Exception e) {
 			model.put("message", e.getMessage());
