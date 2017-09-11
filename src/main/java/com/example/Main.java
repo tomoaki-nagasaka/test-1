@@ -130,11 +130,11 @@ public class Main {
 	String Account(Map<String, Object> model) {
 		try (Connection connection = dataSource.getConnection()) {
 			Statement stmt = connection.createStatement();
-			ResultSet rs = stmt.executeQuery("SELECT custid,orgname,authority FROM userdata ORDER BY NO");
+			ResultSet rs = stmt.executeQuery("SELECT custid,custname,orgname,role FROM userdata ORDER BY NO");
 
 			ArrayList<String> output = new ArrayList<String>();
 			while (rs.next()) {
-				output.add(rs.getString("custid") + "  /  " + rs.getString("orgname") + "  /  " + rs.getString("authority"));
+				output.add(rs.getString("custid") + "  |  " + rs.getString("custname") + "  |  " + rs.getString("orgname") + "  |  " + rs.getString("role"));
 			}
 
 			model.put("records_user", output);
