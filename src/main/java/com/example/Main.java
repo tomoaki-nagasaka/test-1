@@ -94,8 +94,11 @@ public class Main {
 	String Signup(Map<String, Object> model) {
 		try (Connection connection = dataSource.getConnection()) {
 			Statement stmt = connection.createStatement();
-			ResultSet rs = stmt.executeQuery("SELECT custid FROM userdata ORDER BY NO");
+			String sql = stmt.executeQuery("INSERT INTO userdata(custid,custname,orgname,password,roll) values(,,,,)");
 
+		}catch(Exception e) {
+			model.put("message", e.getMessage());
+			return "error";
 		}
 	}
 

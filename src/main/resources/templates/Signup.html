@@ -43,13 +43,31 @@
                             <p class="form-control-static text-danger" th:text="${session['SPRING_SECURITY_LAST_EXCEPTION'].message}"></p>
                         </div>
                         <div class="form-group">
-                            <label for="id" class="sr-only">ID</label>
-                            <input type="text" name="username" id="username_signup" class="form-control" placeholder="ID を入力して下さい"/>
+
+                            custid　<input type="text" name="custid" id="custid_signup" class="form-control"/>
+
                         </div>
                         <div class="form-group">
-                            <label for="password" class="sr-only">Password</label>
-                            <input type="password" name="password" id="password_signup" class="form-control"placeholder="Password を入力して下さい"/>
+
+                            custname　<input type="text" name="custname" id="custname_signup" class="form-control"/>
                         </div>
+
+                        <div class="form-group">
+
+                            orgname　<input type="text" name="orgname" id="orgname_signup" class="form-control"/>
+                        </div>
+
+                        <div class="form-group">
+
+                            password　<input type="password" name="password" id="password_signup" class="form-control"/>
+                        </div>
+
+                        <div class="form-group">
+
+                            <input type="radio" name="roll1" value ="roll1"id="roll1_signup" class="form-control"/>　roll1
+                            <input type="radio" name="roll2" value ="roll2"id="roll2_signup" class="form-control"/>　roll2
+                        </div>
+
                         <br/>
                         <button id="btn-register" class="btn btn-primary btn-block">登録</button>
                     </form>
