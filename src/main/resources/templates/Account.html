@@ -3,6 +3,8 @@
 <body>
 <div class="container">
     <h1>アカウント管理</h1>
+    <table border='1'>
+<tr><th>ID</th><th>ユーザー名</th><th>組織名</th><th>Password</th><th>Role</th></tr>
 
   <ul th:each="record : ${records_user}">
       <li th:text="${record}">
