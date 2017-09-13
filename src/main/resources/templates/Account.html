@@ -1,14 +1,16 @@
 <html xmlns:th="http://www.thymeleaf.org" th:replace="~{fragments/layout :: layout (~{::body},'Account')}">
 
 <body>
-<div class="container">
     <h1>アカウント管理</h1>
-  <ul th:each="record : ${records_user}">
-      <li th:text="${record}">
+  	<table border=1>
+  	<tr bgcolor="#ffffc0"><th>ID</th><th>ユーザー名</th><th>組織名</th><th>Password</th><th>Role</th>
 
- </ul>
 
-</div>
+
+
+
+  	</table>>
+
 
 
 </body>

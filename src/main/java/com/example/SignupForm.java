@@ -5,21 +5,44 @@ import org.hibernate.validator.constraints.Email;
 
 public class SignupForm {
 
-
+	private String custid;
     private String username;
-    private String password;
-    private String custid;
     private String orgname;
+    private String password;
 
 
 
+    public Signup(){}
 
+    public Signup(String custid,String username,String orgname,String password){
+		this.custid = custid;
+		this.username = username;
+		this.orgname = orgname;
+		this.password = password;
+    }
+
+	public String getCustid() {
+    return custid;
+	}
+
+	public void setCustid(String custid) {
+    this.custid = custid;
+
+	}
     public String getUsername() {
         return username;
     }
 
     public void setUsername(String username) {
         this.username = username;
+    }
+
+    public String getOrgname() {
+        return orgname;
+    }
+
+    public void setOrgname(String orgname) {
+        this.orgname = orgname;
     }
 
     public String getPassword() {
@@ -31,19 +54,4 @@ public class SignupForm {
     }
 
 
-    public String getCustid() {
-        return custid;
-    }
-
-    public void setCustid(String custid) {
-        this.custid = custid;
-    }
-
-    public String getOrgname() {
-        return orgname;
-    }
-
-    public void setOrgname(String orgname) {
-        this.orgname = orgname;
-    }
 }
