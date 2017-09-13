@@ -151,7 +151,7 @@ public class Main {
 				output.add(role);
 			}
 
-			model.put("user",output)
+			model.put("user",output);
 			return "Account";
 		} catch (Exception e) {
 			model.put("message", e.getMessage());
