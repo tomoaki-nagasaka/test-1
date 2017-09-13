@@ -142,10 +142,10 @@ public class Main {
 
 			ArrayList<String> list = new ArrayList<String>();
 			while (rs.next()) {
-				list.add(res.getString("custid"));
-				list.add(res.getString("username"));
-				list.add(res.getString("orgname"));
-				list.add(res.getString("role"));
+				list.add(rs.getString("custid"));
+				list.add(rs.getString("username"));
+				list.add(rs.getString("orgname"));
+				list.add(rs.getString("role"));
 			}
 
 			model.put("users",list);
