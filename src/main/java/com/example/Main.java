@@ -141,10 +141,17 @@ public class Main {
 
 			ArrayList<String> output = new ArrayList<String>();
 			while (rs.next()) {
-				output.add(rs.getString("custid") + "  |  " + rs.getString("username") + "  |  " + rs.getString("orgname") + "  |  " + rs.getString("role"));
+				String custid = res.getString("custid");
+				String username = res.getString("username");
+				String orgname = res.getString("orgname");
+				String role = res.getString("role");
+				output.add(custid);
+				output.add(username);
+				output.add(orgname);
+				output.add(role);
 			}
 
-			model.put("records_user", output);
+			model.put("user",output)
 			return "Account";
 		} catch (Exception e) {
 			model.put("message", e.getMessage());
