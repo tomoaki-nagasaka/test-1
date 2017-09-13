@@ -28,6 +28,7 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
 import java.util.ArrayList;
+import java.util.List;
 import java.util.Map;
 
 @Controller
@@ -147,7 +148,7 @@ public class Main {
 				list.add(res.getString("role"));
 			}
 
-			model.put("users",output);
+			model.put("users",list);
 			return "Account";
 		} catch (Exception e) {
 			model.put("message", e.getMessage());
