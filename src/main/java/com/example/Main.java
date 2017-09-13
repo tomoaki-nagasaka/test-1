@@ -133,10 +133,8 @@ public class Main {
 	}
 
 	@RequestMapping("/Account")
-	String Account() {
-		return "Account";
-	}
-	/*String Account(Map<String, Object> model) {
+
+	String Account(Map<String, Object> model) {
 		try (Connection connection = dataSource.getConnection()) {
 			Statement stmt = connection.createStatement();
 			ResultSet rs = stmt.executeQuery("SELECT custid,username,orgname,role FROM userdata ORDER BY NO");
@@ -152,7 +150,7 @@ public class Main {
 			model.put("message", e.getMessage());
 			return "error";
 		}
-	}*/
+	}
 
 	@Bean
 	public DataSource dataSource() throws SQLException {
