@@ -139,12 +139,12 @@ public class Main {
 			Statement stmt = connection.createStatement();
 			ResultSet rs = stmt.executeQuery("SELECT custid,username,orgname,role FROM userdata ORDER BY NO");
 
-			ArrayList<String> output = new ArrayList<String>();
+			ArrayList<String> list = new ArrayList<String>();
 			while (rs.next()) {
-				output.add(res.getString("custid"));
-				output.add(res.getString("username"));
-				output.add(res.getString("orgname"));
-				output.add(res.getString("role"));
+				list.add(res.getString("custid"));
+				list.add(res.getString("username"));
+				list.add(res.getString("orgname"));
+				list.add(res.getString("role"));
 			}
 
 			model.put("users",output);
