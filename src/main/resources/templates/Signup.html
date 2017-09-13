@@ -38,7 +38,7 @@
                 <div class="form-wrap">
                     <div class="text-center"><h1>アカウント登録</h1></div>
                     <br/>
-                    <form role="form" action="Main.java" th:action="@{/Signup}" method="post" id="Signup-form" autocomplete="off">
+                    <form role="form" action="#" th:action="@{/Signup}" method="post" id="Signup-form" autocomplete="off">
                         <div class="form-group" th:if="${session['SPRING_SECURITY_LAST_EXCEPTION']} != null">
                             <p class="form-control-static text-danger" th:text="${session['SPRING_SECURITY_LAST_EXCEPTION'].message}"></p>
                         </div>
