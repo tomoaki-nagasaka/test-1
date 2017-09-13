@@ -30,6 +30,19 @@
     }
     -->
     </style>
+
+    <script type = "text/javascript">
+    	function PushButton(){
+    		var val1 = document.signup.custid.value;
+    		if(val1==""){
+    			alert("IDが未入力です。");
+    			return false;
+    		}
+    		return true;
+    	}
+
+    </script>
+
 </head>
 <body>
     <div class="container">
@@ -38,7 +51,7 @@
                 <div class="form-wrap">
                     <div class="text-center"><h1>アカウント登録</h1></div>
                     <br/>
-                    <form role="form" action="#" th:action="@{/Signup}" method="post" id="Signup-form" autocomplete="off">
+                    <form role="form" action="#" th:action="@{/Signup}" method="post" id="Signup-form" name = "signup" autocomplete="off">
                         <div class="form-group" th:if="${session['SPRING_SECURITY_LAST_EXCEPTION']} != null">
                             <p class="form-control-static text-danger" th:text="${session['SPRING_SECURITY_LAST_EXCEPTION'].message}"></p>
                         </div>
