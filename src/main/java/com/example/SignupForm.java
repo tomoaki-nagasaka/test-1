@@ -12,14 +12,14 @@ public class SignupForm {
 
 
 
-    public Signup(){}
+   /* public Signup(){}
 
     public Signup(String custid,String username,String orgname,String password){
 		this.custid = custid;
 		this.username = username;
 		this.orgname = orgname;
 		this.password = password;
-    }
+    }*/
 
 
 	public String getCustid() {
