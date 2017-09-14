@@ -1,4 +1,4 @@
-/*import javax.validation.constraints.Pattern;
+import javax.validation.constraints.Pattern;
 import javax.validation.constraints.Size;
 
 import org.hibernate.validator.constraints.Email;
@@ -12,7 +12,7 @@ public class SignupForm {
 
 
 
-    public Signup(){}
+    /*public Signup(){}
 
     public Signup(String custid,String username,String orgname,String password){
 		this.custid = custid;
@@ -21,6 +21,7 @@ public class SignupForm {
 		this.password = password;
     }
 
+*/
 	public String getCustid() {
     return custid;
 	}
@@ -54,4 +55,4 @@ public class SignupForm {
     }
 
 
-}*/
+}
