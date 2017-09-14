@@ -147,7 +147,7 @@ public class Main {
 			while (rs.next()) {
 				JButton button = new JButton("削除");
 				output.add(rs.getString("custid") + "　|　" + rs.getString("username") + "　|　" + rs.getString("orgname") + "　|　" + rs.getString("role"));
-				output.add(button)
+				output.add(button);
 
 			}
 
