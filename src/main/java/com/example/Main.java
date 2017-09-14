@@ -142,10 +142,8 @@ public class Main {
 
 			ArrayList<String> output = new ArrayList<String>();
 			while (rs.next()) {
-				output.add(rs.getString("custid"));
-				output.add(rs.getString("username"));
-				output.add(rs.getString("orgname"));
-				output.add(rs.getString("role"));
+				output.add(rs.getString("custid") + "　|　" + rs.getString("username") + "　|　" + rs.getString("orgname") + "　|　" + rs.getString("role"));
+
 			}
 
 			model.put("records",output);
