@@ -3,12 +3,12 @@
 
 <body>
 
-<div class="container">
+<div>
     <h1>アカウント管理</h1>
 
   <ul th:each="record : ${records}">
-      <li th:text="${record}"/>
-      <input type = "button" value ="削除">
+      <li th:text="${record}">
+      <input type = "button" value ="削除"></li>
 
 </ul>
 
