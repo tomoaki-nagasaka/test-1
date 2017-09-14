@@ -6,10 +6,10 @@
 <div class="container">
     <h1>アカウント管理</h1>
 
-  <ul th:each="record : ${records}">
+  <th:each="record : ${records}">
       <th:text="${record}">
       <input type = buttton value ="削除">
-    </ul>
+
 
 </div>
 
