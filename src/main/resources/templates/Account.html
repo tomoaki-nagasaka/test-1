@@ -1,3 +1,4 @@
+<!DOCTYPE html>
 <html xmlns:th="http://www.thymeleaf.org" th:replace="~{fragments/layout :: layout (~{::body},'Account')}">
 
 <body>
@@ -13,10 +14,10 @@
 <c:forEach var="record" items="${records}">
 
   <tr>
-    <td>${record.custid}"</td>
-    <td>${record.username}"</td>
-    <td>${record.orgname}"</td>
-    <td>${record.role}"</td>
+    <td><c:out value="${record.custid}"</td>
+    <td><c:out value="${record.username}"</td>
+    <td><c:out value="${record.orgname}"</td>
+    <td><c:out value="${record.role}"</td>
   </tr>
 
 </c:forEach>
