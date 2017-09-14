@@ -143,11 +143,11 @@ public class Main {
 			ResultSet rs = stmt.executeQuery("SELECT custid,username,orgname,role FROM userdata ORDER BY NO");
 
 			ArrayList<String> output = new ArrayList<String>();
-
+			JButton button = new JButton("削除");
 			while (rs.next()) {
-				JButton button = new JButton("削除");
+
 				output.add(rs.getString("custid") + "　|　" + rs.getString("username") + "　|　" + rs.getString("orgname") + "　|　" + rs.getString("role"));
-				output.add(button);
+				output.add(button)
 			}
 
 			model.put("records",output);
