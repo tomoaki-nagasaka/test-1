@@ -140,15 +140,15 @@ public class Main {
 			Statement stmt = connection.createStatement();
 			ResultSet rs = stmt.executeQuery("SELECT custid,username,orgname,role FROM userdata ORDER BY NO");
 
-			ArrayList<String> list = new ArrayList<String>();
+			ArrayList<String> output = new ArrayList<String>();
 			while (rs.next()) {
-				list.add(rs.getString("custid"));
-				list.add(rs.getString("username"));
-				list.add(rs.getString("orgname"));
-				list.add(rs.getString("role"));
+				output.add(rs.getString("custid"));
+				output.add(rs.getString("username"));
+				output.add(rs.getString("orgname"));
+				output.add(rs.getString("role"));
 			}
 
-			model.put("records",list);
+			model.put("records",output);
 			return "Account";
 		} catch (Exception e) {
 			model.put("message", e.getMessage());

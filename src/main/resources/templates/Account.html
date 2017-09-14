@@ -8,20 +8,18 @@
     <th>ID</th>
     <th>ユーザー名</th>
     <th>組織名</th>
-    <th>Password</th>
     <th>Role</th>
   </tr>
 <th:each="record : ${records}">
 
   <tr>
-    <td>${record.custid }</td>
-    <td>${record.username}</td>
-    <td>${record.orgname}</td>
-    <td>${record.role}</td>
+    <td>th:text="${record.custid}"</td>
+    <td>th:text="${record.username}"</td>
+    <td>th:text="${record.orgname}"</td>
+    <td>th:text="${record.role}"</td>
   </tr>
 
 </th:each>
-
 </table>
 
 
