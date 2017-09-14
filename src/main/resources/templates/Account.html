@@ -10,16 +10,16 @@
     <th>組織名</th>
     <th>Role</th>
   </tr>
-<th:each="record : ${records}">
+<c:forEach var="record" items="${records}">
 
   <tr>
-    <td>th:text="${record.custid}"</td>
-    <td>th:text="${record.username}"</td>
-    <td>th:text="${record.orgname}"</td>
-    <td>th:text="${record.role}"</td>
+    <td>${record.custid}"</td>
+    <td>${record.username}"</td>
+    <td>${record.orgname}"</td>
+    <td>${record.role}"</td>
   </tr>
 
-</th:each>
+</c:forEach>
 </table>
 
 
