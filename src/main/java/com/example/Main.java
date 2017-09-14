@@ -31,7 +31,7 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
 
-import javax.swing.JButton;
+
 
 @Controller
 @SpringBootApplication
@@ -143,11 +143,10 @@ public class Main {
 			ResultSet rs = stmt.executeQuery("SELECT custid,username,orgname,role FROM userdata ORDER BY NO");
 
 			ArrayList<String> output = new ArrayList<String>();
-			JButton button = new JButton("削除");
 			while (rs.next()) {
 
 				output.add(rs.getString("custid") + "　|　" + rs.getString("username") + "　|　" + rs.getString("orgname") + "　|　" + rs.getString("role"));
-				output.add(button);
+
 			}
 
 			model.put("records",output);
