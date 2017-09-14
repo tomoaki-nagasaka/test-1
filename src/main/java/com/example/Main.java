@@ -148,7 +148,7 @@ public class Main {
 				list.add(rs.getString("role"));
 			}
 
-			model.put("users",list);
+			model.put("records",list);
 			return "Account";
 		} catch (Exception e) {
 			model.put("message", e.getMessage());

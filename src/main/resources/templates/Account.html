@@ -11,14 +11,17 @@
     <th>Password</th>
     <th>Role</th>
   </tr>
-<c:forEach var="user" items="${users}">
+<th:each="record : ${records}">
+
   <tr>
-    <td>${users.custid }</td>
-    <td>${users.username}</td>
-    <td>${users.orgname }</td>
-    <td>${users.role }</td>
+    <td>${record.custid }</td>
+    <td>${record.username}</td>
+    <td>${record.orgname}</td>
+    <td>${record.role}</td>
   </tr>
-</c:forEach>
+
+</th:each>
+
 </table>
 
 
