@@ -1,4 +1,4 @@
-package com.example;
+/*package com.example;
 
 
 import javax.sql.DataSource;
@@ -15,4 +15,4 @@ public class AccountDAO{
 		ResultSet rs =null;
 
 	}
-}
+}*/
