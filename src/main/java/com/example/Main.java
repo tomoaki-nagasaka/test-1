@@ -96,7 +96,7 @@ public class Main {
 
 
 		 @Configuration
-		    protected static class AuthenticationConfiguration extends GlobalAuthenticationConfigurerAdapter {
+		    protected class AuthenticationConfiguration extends GlobalAuthenticationConfigurerAdapter {
 
 
 		        @Override
