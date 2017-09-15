@@ -15,22 +15,22 @@ public class User {
     @Getter
     private String custid;
 
-    @Id
+
     @Setter
     @Getter
     private String username;
 
-    @Id
+
     @Getter
     @Setter
     private String orgname;
 
-    @Id
+
     @Getter
     @Setter
     private String password;
 
-    @Id
+
     @Getter
     @Setter
     private String role;
