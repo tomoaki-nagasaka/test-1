@@ -94,10 +94,10 @@ public class Main {
 
 
 	@RequestMapping("/Signup")
-	String Signup() {
-		return "Signup";
+	//String Signup() {
+		//return "Signup";
 
-	/*String Signup(String custid,String username,String orgname,String password) {
+	String Signup(String custid,String username,String orgname,String password) {
 
 		this.custid = custId;
 		this.username = userName;
@@ -111,7 +111,7 @@ public class Main {
 		}catch(Exception e) {
 			model.put("message", e.getMessage());
 			return "error";
-		}*/
+		}
 	}
 
 
