@@ -96,7 +96,7 @@ public class Main {
 	@RequestMapping("/Signup")
 	String Signup() {
 		return "Signup";
-
+	}
 	/*String Signup(String custid,String username,String orgname,String password) {
 
 		this.custid = custId;
