@@ -92,6 +92,7 @@ public class Main {
 		        public void init(AuthenticationManagerBuilder auth) throws Exception {
 		            auth.jdbcAuthentication().dataSource(dataSource);
 		        }
+		    }
 
 	}
 
