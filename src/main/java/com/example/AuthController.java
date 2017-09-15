@@ -1,4 +1,4 @@
-package com.example;
+/*package com.example;
 
 import static org.springframework.web.bind.annotation.RequestMethod.*;
 
@@ -15,6 +15,6 @@ import org.yyama.sample.form.UserForm;
 
 @Controller
 public class AuthController {
-	
-	
-}
+
+
+}*/
