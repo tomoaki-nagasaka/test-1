@@ -97,7 +97,7 @@ public class Main {
 	//String Signup() {
 		//return "Signup";
 
-	String Signup(String custid,String username,String orgname,String password) {
+	String Signup(Map<String, Object> model,String custid,String username,String orgname,String password) {
 
 		this.custid = custId;
 		this.username = userName;
