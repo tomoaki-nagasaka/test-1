@@ -88,6 +88,13 @@ public class Main {
 		}
 
 		//追加箇所
+		@Override
+	    protected void configure(HttpSecurity http) throws Exception {
+	        http.authorizeRequests().antMatchers("/", "/Signup").permitAll().anyRequest().authenticated();
+	        http.formLogin().loginPage("/login").permitAll().and().logout().permitAll();
+	    }
+
+
 		 @Configuration
 		    protected static class AuthenticationConfiguration extends GlobalAuthenticationConfigurerAdapter {
 		        @Autowired
