@@ -1,4 +1,4 @@
-package com.example;
+package net.teachingprogramming.mybootapp.entity;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Configuration;
