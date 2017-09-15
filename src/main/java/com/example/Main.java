@@ -83,6 +83,16 @@ public class Main {
 			.withUser("user").password("pass").roles("USER");
 		}
 
+		 @Configuration
+		    protected static class AuthenticationConfiguration extends GlobalAuthenticationConfigurerAdapter {
+		        @Autowired
+		        private DataSource dataSource;
+
+		        @Override
+		        public void init(AuthenticationManagerBuilder auth) throws Exception {
+		            auth.jdbcAuthentication().dataSource(dataSource);
+		        }
+
 	}
 
 

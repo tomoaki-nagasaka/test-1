@@ -1,4 +1,4 @@
-//package net.teachingprogramming.mybootapp.entity;
+/*package net.teachingprogramming.mybootapp.entity;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Configuration;
@@ -17,7 +17,7 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
     @Override
     protected void configure(HttpSecurity http) throws Exception {
         http.authorizeRequests().antMatchers("/", "/Signup").permitAll().anyRequest().authenticated();
-        http.formLogin().loginPage("/login").permitAll().and().logout().permitAll();
+
     }
 
     @Configuration
@@ -31,3 +31,4 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
         }
     }
 }
+*/
