@@ -87,6 +87,7 @@ public class Main {
 			.withUser("user").password("pass").roles("USER");
 		}
 
+		//追加箇所
 		 @Configuration
 		    protected static class AuthenticationConfiguration extends GlobalAuthenticationConfigurerAdapter {
 		        @Autowired
@@ -97,6 +98,7 @@ public class Main {
 		            auth.jdbcAuthentication().dataSource(dataSource);
 		        }
 		    }
+		 //
 
 	}
 
