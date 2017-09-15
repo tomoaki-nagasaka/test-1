@@ -97,8 +97,7 @@ public class Main {
 
 		 @Configuration
 		    protected static class AuthenticationConfiguration extends GlobalAuthenticationConfigurerAdapter {
-		        @Autowired
-		        private DataSource dataSource;
+
 
 		        @Override
 		        public void init(AuthenticationManagerBuilder auth) throws Exception {
