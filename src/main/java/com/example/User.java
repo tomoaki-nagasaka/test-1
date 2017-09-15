@@ -1,4 +1,4 @@
-package net.teachingprogramming.mybootapp.entity;
+/*package net.teachingprogramming.mybootapp.entity;
 
 import lombok.Getter;
 import lombok.Setter;
@@ -35,4 +35,4 @@ public class User {
     @Getter
     @Setter
     private String role;
-}
+}*/
