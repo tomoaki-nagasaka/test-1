@@ -1,4 +1,4 @@
-/*package net.teachingprogramming.mybootapp.entity;
+package net.teachingprogramming.mybootapp.entity;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Configuration;
@@ -31,4 +31,3 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
         }
     }
 }
-*/

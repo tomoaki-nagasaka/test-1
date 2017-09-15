@@ -87,28 +87,7 @@ public class Main {
 			.withUser("user").password("pass").roles("USER");
 		}
 
-		//追加箇所
-		@Override
-	    protected void configure(HttpSecurity http) throws Exception {
-	        http.authorizeRequests().antMatchers("/", "/Signup").permitAll().anyRequest().authenticated();
-	        http.formLogin().loginPage("/login").permitAll().and().logout().permitAll();
-	    }
-
-
-		 @Configuration
-		    protected class AuthenticationConfiguration extends GlobalAuthenticationConfigurerAdapter {
-
-
-		        @Override
-		        public void init(AuthenticationManagerBuilder auth) throws Exception {
-		            auth.jdbcAuthentication().dataSource(dataSource);
-		        }
-		    }
-		 //
-
 	}
-
-
 
 	@RequestMapping("/Home")
 	String Menu() {
