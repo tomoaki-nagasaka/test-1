@@ -42,6 +42,7 @@ public class Main {
 
 	@Autowired
 	private DataSource dataSource;
+	private UserRepository userRepository;
 
 	public static void main(String[] args) throws Exception {
 		SpringApplication.run(Main.class, args);
@@ -92,27 +93,28 @@ public class Main {
 	}
 
 
-
-	@RequestMapping("/Signup")
+	@RequestMapping(value = "Signup",method = RequestMethod.GET)
 	String Signup() {
 		return "Signup";
 	}
-	/*String Signup(String custid,String username,String orgname,String password) {
 
-		this.custid = custId;
-		this.username = userName;
-		this.orgname = orgName;
-		this.password = passWord;
+	@RequestMapping(value = "Signup", method = RequestMethod.POST)
+	public String Signup(@RequestParam String custid, @RequestParam String username,@RequestParam String orgname,@RequestParam String password,@RequestParam String role) {
+	    User user = new User();
+	    user.setCustid(custid);
+	    user.setUsername(username);
+	    user.setOrgname(orgname);
+	    user.setPassword(password);
+	    user.setRole(role);
+	    userRepository.save(user);
+	    return "Signup";
+	}
 
-		try (Connection connection = dataSource.getConnection()) {
-			Statement stmt = connection.createStatement();
-			String sql = stmt.executeQuery("INSERT INTO userdata(custid,custname,orgname,password,roll) values(custId,userName,orgName,passWord,)");
-
-		}catch(Exception e) {
-			model.put("message", e.getMessage());
-			return "error";
-		}
+	/*@RequestMapping("/Signup")
+	String Signup() {
+		return "Signup";
 	}*/
+
 
 
 
