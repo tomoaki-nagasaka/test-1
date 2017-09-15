@@ -6,10 +6,11 @@
 <div class="container">
     <h1>アカウント管理</h1>
 
+<p>
   <ul th:each="record : ${records}">
       <li th:text="${record}"></li>
-
-
+	 <input type =button value = "削除">
+</p>
 </ul>
 
 </div>
