@@ -8,32 +8,31 @@ import javax.persistence.Id;
 import javax.persistence.Table;
 
 @Entity
-@Setter
-@Getter
-@Id
 @Table(name = "userdata")
 public class User {
 
-
+	@Id
+	@Setter
+	@Getter
     private String custid;
 
 
-    //@Setter
-    //@Getter
+    @Setter
+    @Getter
     private String username;
 
 
-    //@Getter
-    //@Setter
+    @Getter
+    @Setter
     private String orgname;
 
 
-    //@Getter
-    //@Setter
+    @Getter
+    @Setter
     private String password;
 
 
-    //@Getter
-    //@Setter
+    @Getter
+    @Setter
     private String role;
 }
