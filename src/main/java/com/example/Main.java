@@ -46,7 +46,7 @@ public class Main {
 
 	@Autowired
 	private DataSource dataSource;
-	private UserRepository userRepository;
+	//private UserRepository userRepository;
 
 	public static void main(String[] args) throws Exception {
 		SpringApplication.run(Main.class, args);
