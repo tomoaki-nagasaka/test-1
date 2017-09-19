@@ -110,7 +110,7 @@ public class Main {
 	    user.setUsername(username);
 	    user.setOrgname(orgname);
 	    user.setPassword(password);
-	    user.setRole(role);
+	    //user.setRole(role);
 	    userRepository.save(user);
 	    return "Signup";
 	}
