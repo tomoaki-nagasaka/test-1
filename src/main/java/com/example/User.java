@@ -1,4 +1,4 @@
-package com.example;
+package net.teachingprogramming.mybootapp.entity;
 
 import lombok.Getter;
 import lombok.Setter;

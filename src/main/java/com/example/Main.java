@@ -1,4 +1,4 @@
-package com.example;
+package net.teachingprogramming.mybootapp.controller;
 
 import com.zaxxer.hikari.HikariConfig;
 import com.zaxxer.hikari.HikariDataSource;
@@ -39,6 +39,7 @@ import java.util.List;
 import java.util.Map;
 
 import net.teachingprogramming.mybootapp.repository.UserRepository;
+import net.teachingprogramming.mybootapp.entity.User;
 
 @Controller
 @SpringBootApplication
