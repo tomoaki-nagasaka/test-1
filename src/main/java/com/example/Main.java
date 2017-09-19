@@ -38,8 +38,6 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
 
-import net.teachingprogramming.mybootapp.repository.UserRepository;
-import net.teachingprogramming.mybootapp.entity.User;
 
 @Controller
 @SpringBootApplication
