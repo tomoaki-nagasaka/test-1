@@ -46,7 +46,7 @@ public class Main {
 
 	@Autowired
 	private DataSource dataSource;
-	//private UserRepository userRepository;
+	private UserRepository userRepository;
 
 	public static void main(String[] args) throws Exception {
 		SpringApplication.run(Main.class, args);
@@ -95,7 +95,7 @@ public class Main {
 	}
 
 
-	/*@RequestMapping(value = "Signup",method = RequestMethod.GET)
+	@RequestMapping(value = "Signup",method = RequestMethod.GET)
 	String Signup() {
 		return "Signup";
 	}
@@ -110,13 +110,13 @@ public class Main {
 	    user.setRole(role);
 	    userRepository.save(user);
 	    return "Signup";
-	}*/
+	}
 
 
-	@RequestMapping("/Signup")
+	/*@RequestMapping("/Signup")
 	String Signup() {
 		return "Signup";
-	}
+	}*/
 
 
 
