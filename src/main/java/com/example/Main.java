@@ -101,7 +101,7 @@ public class Main {
 	}
 
 	@RequestMapping(value = "Signup", method = RequestMethod.POST)
-	public String Signup(@RequestParam String custid, @RequestParam String username,@RequestParam String orgname,@RequestParam String password,) {
+	public String Signup(@RequestParam String custid, @RequestParam String username,@RequestParam String orgname,@RequestParam String password) {
 	    User user = new User();
 	    user.setCustid(custid);
 	    user.setUsername(username);
