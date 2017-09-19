@@ -1,6 +1,6 @@
 package com.example;
 
-//import com.zaxxer.hikari.HikariConfig;
+import com.zaxxer.hikari.HikariConfig;
 import com.zaxxer.hikari.HikariDataSource;
 import com.example.User;
 import com.example.UserRepository;
