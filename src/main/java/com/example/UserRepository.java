@@ -1,4 +1,4 @@
-package net.teachingprogramming.mybootapp.repository;
+package com.example;
 
 import net.teachingprogramming.mybootapp.entity.User;
 import org.springframework.data.jpa.repository.JpaRepository;
