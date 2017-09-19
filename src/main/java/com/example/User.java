@@ -1,7 +1,5 @@
 package com.example;
 
-import javax.persistence.ManyToMany;
-import javax.persistence.OneToMany;
 
 import javax.persistence.Entity;
 import javax.persistence.Table;
