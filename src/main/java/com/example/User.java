@@ -5,7 +5,7 @@ package com.example;
 import javax.persistence.Table;
 
 //@Entity
-@Table(name = "userdata")
+@Table(name = "USERDATA")
 public class User {
 
 
