@@ -94,28 +94,28 @@ public class Main {
 		return "Home";
 	}
 
-	/*
+
 	@RequestMapping(value = "Signup",method = RequestMethod.GET)
 	String Signup() {
 		return "Signup";
 	}
 
 	@RequestMapping(value = "Signup", method = RequestMethod.POST)
-	public String Signup(@RequestParam String custid, @RequestParam String username,@RequestParam String orgname,@RequestParam String password,@RequestParam String role) {
+	public String Signup(@RequestParam String custid, @RequestParam String username,@RequestParam String orgname,@RequestParam String password,) {
 	    User user = new User();
 	    user.setCustid(custid);
 	    user.setUsername(username);
 	    user.setOrgname(orgname);
 	    user.setPassword(password);
-	    user.setRole(role);
+	    //user.setRole(role);
 	    userRepository.save(user);
 	    return "Signup";
 	}
-	*/
 
-	@RequestMapping("/Signup")
-	String Signup() {
-		return "Signup";
+
+	//@RequestMapping("/Signup")
+	//String Signup() {
+		//return "Signup";
 	}
 
 

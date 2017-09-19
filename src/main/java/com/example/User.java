@@ -1,4 +1,4 @@
-/*package net.teachingprogramming.mybootapp.entity;
+package net.teachingprogramming.mybootapp.entity;
 
 import lombok.Getter;
 import lombok.Setter;
@@ -32,7 +32,7 @@ public class User {
     private String password;
 
 
-    @Getter
-    @Setter
-    private String role;
-}*/
+    //@Getter
+    //@Setter
+    //private String role;
+}
