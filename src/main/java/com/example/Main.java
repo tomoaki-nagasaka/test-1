@@ -24,7 +24,7 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
-//import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.security.web.util.matcher.AntPathRequestMatcher;
 
 import javax.sql.DataSource;
@@ -102,7 +102,9 @@ public class Main {
 	}
 
 	@RequestMapping(value = "Signup", method = RequestMethod.POST)
-	public String Signup(@RequestParam String custid, @RequestParam String username,@RequestParam String orgname,@RequestParam String password,@RequestParam String role) {
+	public String Signup(@RequestParam String custid, @RequestParam String username,@RequestParam String orgname,@RequestParam String password
+			//@RequestParam String role
+			) {
 	    User user = new User();
 	    user.setCustid(custid);
 	    user.setUsername(username);
