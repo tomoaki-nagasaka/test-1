@@ -1,4 +1,4 @@
-/*package net.teachingprogramming.mybootapp.config;
+package net.teachingprogramming.mybootapp.config;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Configuration;
@@ -30,4 +30,4 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
             auth.jdbcAuthentication().dataSource(dataSource);
         }
     }
-}*/
+}
