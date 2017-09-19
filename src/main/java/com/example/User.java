@@ -1,10 +1,10 @@
 package com.example;
 
 
-import javax.persistence.Entity;
+//import javax.persistence.Entity;
 import javax.persistence.Table;
 
-@Entity
+//@Entity
 @Table(name = "userdata")
 public class User {
 
