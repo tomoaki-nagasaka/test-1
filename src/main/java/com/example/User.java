@@ -3,13 +3,18 @@ package com.example;
 
 import javax.persistence.Entity;
 import javax.persistence.Table;
+import javax.persistence.Column;
+import javax.persistence.GeneratedValue;
+import javax.persistence.Id;
 
 @Entity
 @Table(name = "userdata")
 public class User {
 
-
+	@Id
     private String custid;
+
+	@column
     private String username;
     private String orgname;
     private String password;
