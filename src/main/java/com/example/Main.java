@@ -3,7 +3,7 @@ package com.example;
 import com.zaxxer.hikari.HikariConfig;
 import com.zaxxer.hikari.HikariDataSource;
 import com.example.userdata;
-import com.example.jpa.repository.UserRepository;
+import com.example.UserRepository;
 import com.example.WebSecurityConfig;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -101,13 +101,13 @@ public class Main {
 	}
 
 
-	@RequestMapping(value = "Signup",method = RequestMethod.GET)
-	String Signup() {
-		return "Signup";
+	@RequestMapping(value = "signup",method = RequestMethod.GET)
+	String signup() {
+		return "signup";
 	}
 
-	@RequestMapping(value = "Signup", method = RequestMethod.POST)
-	public String Signup(@RequestParam String custid, @RequestParam String username,@RequestParam String orgname,@RequestParam String password
+	@RequestMapping(value = "signup", method = RequestMethod.POST)
+	public String signup(@RequestParam String custid, @RequestParam String username,@RequestParam String orgname,@RequestParam String password
 			//@RequestParam String role
 			){
 	    userdata user = new userdata();
