@@ -1,1 +1,16 @@
-
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8" />
+    <title>sign up</title>
+</head>
+<body>
+    <form th:action="@{/signup}" method="post">
+    	<div><label>ID: <input type="text" name="custid"/> </label></div>
+        <div><label>ユーザ名: <input type="text" name="username"/> </label></div>
+        <div><label>組織名: <input type="text" name="orgname"/> </label></div>
+        <div><label>パスワード: <input type="password" name="password"/> </label></div>
+        <div><input type="submit" value="登録"/></div>
+    </form>
+</body>
+</html>
