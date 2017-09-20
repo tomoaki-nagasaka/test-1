@@ -1,7 +1,7 @@
 package com.example;
 
 
-public class User {
+public class userdata {
 
 
     private String custid;
