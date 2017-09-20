@@ -110,7 +110,7 @@ public class Main {
 	public String Signup(@RequestParam String custid, @RequestParam String username,@RequestParam String orgname,@RequestParam String password
 			//@RequestParam String role
 			){
-	    User user = new User();
+	    userdata user = new userdata();
 	    user.setCustid(custid);
 	    user.setUsername(username);
 	    user.setOrgname(orgname);
