@@ -47,7 +47,7 @@ public String signup(@RequestParam String custid,@RequestParam String username,@
     user.setUsername(username);
     user.setOrgname(orgname);
     user.setPassword(password);
-    userRepository.save(user);
+    UserRepository.save(user);
 
     return "signup";
 }
