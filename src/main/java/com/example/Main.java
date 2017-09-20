@@ -3,7 +3,7 @@ package com.example;
 import com.zaxxer.hikari.HikariConfig;
 import com.zaxxer.hikari.HikariDataSource;
 import com.example.userdata;
-//import com.example.UserRepository;
+import com.example.UserRepository;
 import com.example.WebSecurityConfig;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -52,7 +52,7 @@ public class Main {
 
 	@Autowired
 	private DataSource dataSource;
-	//private UserRepository userRepository;
+	private UserRepository userRepository;
 
 	public static void main(String[] args) throws Exception {
 		SpringApplication.run(Main.class, args);
@@ -116,7 +116,7 @@ public class Main {
 	    user.setOrgname(orgname);
 	    user.setPassword(password);
 	    //user.setRole(role);
-	    //UserRepository.save(user);
+	    UserRepository.save(user);
 	    return "Signup";
 	}
 
