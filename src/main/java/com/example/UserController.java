@@ -23,6 +23,13 @@ import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 
 
+@Controller
+@SpringBootApplication
+public class Main {
+
+	@Value("${spring.datasource.url}")
+	private String dbUrl;
+
 @Autowired
 private UserRepository userRepository;
 @Autowired
@@ -54,4 +61,4 @@ public DataSource dataSource() throws SQLException {
 		config.setJdbcUrl(dbUrl);
 		return new HikariDataSource(config);
 	}
-
+}
