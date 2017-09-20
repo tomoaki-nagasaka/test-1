@@ -1,8 +1,8 @@
 package com.example;
 
 import com.example.userdata;
-import org.springframework.data.jpa.JpaRepository;
-//.repository
+import org.springframework.data.jpa.repository.JpaRepository;
+
 
 
 
