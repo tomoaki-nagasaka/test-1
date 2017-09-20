@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html xmlns:th="http://www.thymeleaf.org" th:replace="~{fragments/layout :: layout (~{::body},'Account')}">
 <head>
 <meta charset="utf-8">
 <meta name="description" content="アカウント情報を表示します。">
@@ -16,3 +16,18 @@
   </div>
 </div>
 <div id="wrap" style="display:none">
+
+<tr><th data-column-id='no' data-type='numeric' data-identifier='true' data-width='3%'>No</th>
+               <th data-column-id='day' data-width='7%'>日時</th>
+               <th data-column-id='user'  data-width='10%'>ユーザーID</th>
+               <th data-column-id='que'  data-width='40%'>質問内容</th>
+               <th data-column-id='ans'  data-width='40%'>回答内容</th>
+           </tr>"
+</div>
+
+<input id="btn_del" type="button" value="選択行の削除" onclick="drow()"  style="display:none">
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.8/jquery.js"></script>
+<script src="js/bootstrap.js"></script>
+<script src="js/jquery.bootgrid.js"></script>
+</body>
+</html>
