@@ -62,3 +62,4 @@ public DataSource dataSource() throws SQLException {
 		return new HikariDataSource(config);
 	}
 }
+}
