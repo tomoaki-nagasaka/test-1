@@ -1,4 +1,4 @@
-package com.example;
+/*package com.example;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Configuration;
@@ -30,4 +30,4 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
             auth.jdbcAuthentication().dataSource(dataSource);
         }
     }
-}
+}*/

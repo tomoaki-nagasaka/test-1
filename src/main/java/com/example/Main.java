@@ -102,7 +102,7 @@ public class Main {
 	}
 
 
-	@RequestMapping(value = "signup",method = RequestMethod.GET)
+/*	@RequestMapping(value = "signup",method = RequestMethod.GET)
 	String signup() {
 		return "signup";
 	}
@@ -120,12 +120,12 @@ public class Main {
 	    UserRepository.save(user);
 	    return "Signup";
 	}
+*/
 
-
-	/*@RequestMapping("/Signup")
+	@RequestMapping("/signup")
 	String Signup() {
-		return "Signup";
-	}*/
+		return "signup";
+	}
 
 
 
