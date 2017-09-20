@@ -1,4 +1,4 @@
-/*package com.example;
+package com.example;
 
 import com.zaxxer.hikari.HikariConfig;
 import com.zaxxer.hikari.HikariDataSource;
@@ -119,7 +119,7 @@ public class Main {
 	    UserRepository.save(user);
 	    return "Signup";
 	}
-*/
+
 
 	/*@RequestMapping("/Signup")
 	String Signup() {
@@ -127,7 +127,7 @@ public class Main {
 	}*/
 
 
-/*
+
 
 	@RequestMapping("/db")
 	String db(Map<String, Object> model) {
@@ -179,4 +179,4 @@ public class Main {
 		}
 	}
 
-}*/
+}
