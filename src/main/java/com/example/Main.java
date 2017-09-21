@@ -170,9 +170,8 @@ public class Main {
 			model.put("message", e.getMessage());
 			return "error";
 		}
-*/
 	}
-
+*/
 	@Bean
 	public DataSource dataSource() throws SQLException {
 		if (dbUrl == null || dbUrl.isEmpty()) {
