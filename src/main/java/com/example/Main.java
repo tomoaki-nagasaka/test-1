@@ -91,8 +91,7 @@ public class Main {
 		public void configureGlobal(AuthenticationManagerBuilder auth) throws Exception {
 			auth
 			.inMemoryAuthentication()
-			.withUser("user").password("pass").roles("USER")
-			.withUser("admin").password("pass").roles("ADMIN");
+			.withUser("user").password("pass").roles("USER");
 		}
 
 	}
