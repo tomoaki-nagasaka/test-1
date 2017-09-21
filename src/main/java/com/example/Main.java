@@ -74,7 +74,7 @@ public class Main {
 			http
 			.authorizeRequests()
 			.antMatchers("/", "/login").permitAll()
-			.antMatchers("/**").hasRole("USER")
+			.antMatchers("/**").hasAnyRole("USER","ADMIN")
 			.antMatchers("/index/**").hasRole("ADMIN")
 			.and()
 			.formLogin()
@@ -91,7 +91,8 @@ public class Main {
 		public void configureGlobal(AuthenticationManagerBuilder auth) throws Exception {
 			auth
 			.inMemoryAuthentication()
-			.withUser("user").password("pass").roles("USER");
+			.withUser("user").password("pass").roles("USER")
+			.withUser("admin").password("pass").roles("ADMIN");
 		}
 
 	}
