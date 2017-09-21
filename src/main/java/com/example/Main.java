@@ -92,6 +92,9 @@ public class Main {
 			auth
 			.inMemoryAuthentication()
 			.withUser("user").password("pass").roles("USER");
+			auth
+			.inMemoryAuthentication()
+			.withUser("admin").password("pass").roles("ADMIN");
 		}
 
 	}
