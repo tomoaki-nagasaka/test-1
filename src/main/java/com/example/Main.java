@@ -100,7 +100,7 @@ public class Main {
 	}
 
 	@RequestMapping("/Home")
-	String Menu() {
+	String Home() {
 		return "Home";
 	}
 
