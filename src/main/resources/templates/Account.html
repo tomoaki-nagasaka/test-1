@@ -19,7 +19,7 @@
 			<thead>
 				<tr>
 					<th data-column-id='no' data-type='numeric' data-identifier='true'
-						data-width="20">No</th>
+						data-width=''>No</th>
 					<th data-column-id='custid' data-width="40">ユーザーID</th>
 					<th data-column-id='username' data-width="60">ユーザー名</th>
 					<th data-column-id='orgname' data-width="60">所属</th>
@@ -31,5 +31,8 @@
 		</table>
 		<!-- </div> -->
 	</div>
+	<script th:src="@{/ajax.googleapis.com/ajax/libs/jquery/1.8/jquery.js}"></script>
+	<script th:src="@{js/bootstrap.js"></script>
+	<script th:src="@{js/jquery.bootgrid.js"}"></script>
 </body>
 </html>
