@@ -75,7 +75,7 @@ public class Main {
 			.authorizeRequests()
 			.antMatchers("/", "/login").permitAll()
 			.antMatchers("/**").hasAnyRole("USER","ADMIN")
-			//.antMatchers("/Account/**").hasRole("ADMIN")
+			.antMatchers("/Account/**").hasRole("ADMIN")
 			.and()
 			.formLogin()
 			.loginPage("/login");
