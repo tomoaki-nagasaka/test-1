@@ -1,5 +1,6 @@
 <!DOCTYPE html>
-<html xmlns:th="http://www.thymeleaf.org" th:replace="~{fragments/layout :: layout (~{::body},'Account')}">
+<html xmlns:th="http://www.thymeleaf.org"
+	th:replace="~{fragments/layout :: layout (~{::body},'Account')}">
 <head>
 <meta charset="utf-8">
 <meta name="description" content="アカウント情報を表示します。">
@@ -24,6 +25,23 @@
 <body>
 	<script type="text/javascript">
 
+	import java.sql.Connection;
+	import java.sql.ResultSet;
+	import java.sql.SQLException;
+	import java.sql.Statement;
+	import org.springframework.security.config.annotation.authentication.configurers.GlobalAuthenticationConfigurerAdapter;
+	import org.springframework.security.config.annotation.web.servlet.configuration.EnableWebMvcSecurity;
+
+	class Account {
+		String db(Map<String, Object> model) {
+		try (Connection connection = dataSource.getConnection()) {
+			Statement stmt = connection.createStatement();
+			ResultSet rs = stmt.executeQuery("SELECT no,custid,username,orgname,role FROM userdata ORDER BY NO");
+			public void main(String args[]) {
+			System.out.print(rs);
+			}
+		}
+	}
 	</script>
 	<div class="container">
 		<div class="table-responsive">
