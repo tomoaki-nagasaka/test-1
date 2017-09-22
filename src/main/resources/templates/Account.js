@@ -20,10 +20,10 @@
 				<tr>
 					<th data-column-id='no' data-type='numeric' data-identifier='true'
 						data-width='3%'>No</th>
-					<th data-column-id='custid' data-width='7%'>ユーザーID</th>
-					<th data-column-id='username' data-width='10%'>ユーザー名</th>
-					<th data-column-id='orgname' data-width='40%'>所属</th>
-					<th data-column-id='role' data-width='40%'>権限</th>
+					<th data-column-id='day' data-width='7%'>ユーザーID</th>
+					<th data-column-id='user' data-width='10%'>ユーザー名</th>
+					<th data-column-id='que' data-width='40%'>所属</th>
+					<th data-column-id='ans' data-width='40%'>権限</th>
 				</tr>
 			<tbody>
 
