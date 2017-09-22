@@ -24,24 +24,60 @@
 </head>
 <body>
 	<script type="text/javascript">
-	import com.zaxxer.hikari.HikariConfig;
-	import com.zaxxer.hikari.HikariDataSource;
+	import java.sql.Connection;
+	import java.sql.DriverManager;
+	import java.sql.ResultSet;
+	import java.sql.ResultSetMetaData;
+	import java.sql.Statement;
+	import java.util.ArrayList;
+	import java.util.List;
 
-	String Account(Map<String, Object> model) {
-		try (Connection connection = dataSource.getConnection()) {
-			Statement stmt = connection.createStatement();
-			ResultSet rs = stmt.executeQuery("SELECT no,custid,username,orgname,role FROM userdata ORDER BY NO");
+    public static void main(String[] args) throws Exception {
+        Connection connection = null;
+        Statement statement = null;
+        ResultSet resultSet = null;
 
-			@Bean
-			public DataSource dataSource() throws SQLException {
-				if (dbUrl == null || dbUrl.isEmpty()) {
-					return new HikariDataSource();
-				} else {
-					HikariConfig config = new HikariConfig();
-					config.setJdbcUrl(dbUrl);
-					return new HikariDataSource(config);
-				}
-			}
+	try {
+		connection = DriverManager.getConnection("postgres://gopasxxhdasfak:ab14f9f8cbd407f8e7c7c99d3d03ac82f3c35b9d7a141615a563adeb2dd964f4@ec2-54-83-26-65.compute-1.amazonaws.com:5432/d9pf8qthde7brb",
+                "postgres", // ログインロール
+                "ab14f9f8cbd407f8e7c7c99d3d03ac82f3c35b9d7a141615a563adeb2dd964f4"); // パスワード
+        statement = connection.createStatement();
+        resultSet = statement.executeQuery("SELECT * FROM pg_shadow");
+
+        List<String> fields = new ArrayList<String>();
+        ResultSetMetaData rsmd = resultSet.getMetaData();
+        for (int i = 1; i <= rsmd.getColumnCount(); i++) {
+            fields.add(rsmd.getColumnName(i));
+        }
+	}
+    int rowCount = 0;
+    while (resultSet.next()) {
+        rowCount++;
+
+        System.out.println("---------------------------------------------------");
+        System.out.println("--- Rows:" + rowCount);
+        System.out.println("---------------------------------------------------");
+
+        //値は、「resultSet.getString(<フィールド名>)」で取得する。
+        for (String field : fields) {
+            System.out.println(field + ":" + resultSet.getString(field));
+        }
+    }
+
+
+} finally {
+    //接続を切断する
+    if (resultSet != null) {
+        resultSet.close();
+    }
+    if (statement != null) {
+        statement.close();
+    }
+    if (connection != null) {
+        connection.close();
+    }
+}
+
 
 	</script>
 	<div class="container">
