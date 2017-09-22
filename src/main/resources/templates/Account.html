@@ -24,6 +24,24 @@
 </head>
 <body>
 	<script type="text/javascript">
+	import com.zaxxer.hikari.HikariConfig;
+	import com.zaxxer.hikari.HikariDataSource;
+
+	String Account(Map<String, Object> model) {
+		try (Connection connection = dataSource.getConnection()) {
+			Statement stmt = connection.createStatement();
+			ResultSet rs = stmt.executeQuery("SELECT no,custid,username,orgname,role FROM userdata ORDER BY NO");
+
+			@Bean
+			public DataSource dataSource() throws SQLException {
+				if (dbUrl == null || dbUrl.isEmpty()) {
+					return new HikariDataSource();
+				} else {
+					HikariConfig config = new HikariConfig();
+					config.setJdbcUrl(dbUrl);
+					return new HikariDataSource(config);
+				}
+			}
 
 	</script>
 	<div class="container">
@@ -43,26 +61,13 @@
 
 				</thead>
 				<tr>
-					<td>1</td>
-					<td>u</td>
-					<td>f</td>
-					<td>d</td>
-					<td>r</td>
+					<td>rs[0]</td>
+					<td>rs[1]</td>
+					<td>rs[2]</td>
+					<td>rs[3]</td>
+					<td>rs[4]</td>
 				</tr>
-				<tr>
-					<td>1</td>
-					<td>u</td>
-					<td>f</td>
-					<td>d</td>
-					<td>r</td>
-				</tr>
-				<tr>
-					<td>1</td>
-					<td>u</td>
-					<td>f</td>
-					<td>d</td>
-					<td>r</td>
-				</tr>
+
 				</tbody>
 			</table>
 		</div>
