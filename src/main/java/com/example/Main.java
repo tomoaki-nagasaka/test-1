@@ -153,6 +153,9 @@ public class Main {
 	}
 
 	@RequestMapping("/Account")
+	String signup() {
+		return "Account";
+	}
 /*
 	String Account(Map<String, Object> model) {
 		try (Connection connection = dataSource.getConnection()) {
