@@ -153,7 +153,7 @@ public class Main {
 	}
 
 	@RequestMapping("/Account")
-	String signup() {
+	String Account() {
 		return "Account";
 	}
 /*
