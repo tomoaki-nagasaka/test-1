@@ -25,44 +25,14 @@
 <body>
 	<script type="text/javascript">
 
-	import com.zaxxer.hikari.HikariConfig;
-	import com.zaxxer.hikari.HikariDataSource;
-	import java.sql.Connection;
-	import java.sql.ResultSet;
-	import java.sql.SQLException;
-	import java.sql.Statement;
-	import java.util.ArrayList;
-	import java.util.List;
-	import java.util.Map;
 
 
-	@Controller
-	@SpringBootApplication
-	public class Account {
-		public void account(){
-		String Account(Map<String, Object> model) {
-			try (Connection connection = dataSource.getConnection()) {
-				Statement stmt = connection.createStatement();
-				ResultSet rs = stmt.executeQuery("SELECT no,custid,username,orgname,role FROM userdata ORDER BY NO");
-			}
-			System.out.print(rs);
-		}
-		@Bean
-		public DataSource dataSource() throws SQLException {
-			if (dbUrl == null || dbUrl.isEmpty()) {
-				return new HikariDataSource();
-			} else {
-				HikariConfig config = new HikariConfig();
-				config.setJdbcUrl(dbUrl);
-				return new HikariDataSource(config);
-			}
-		}
-	}
+
 	</script>
 
 	<div class="container">
 		<div class="table-responsive">
-			<table class='table table-striped table-bordered'>
+			<table class='table table-striped table-bordered table-hover'>
 				<thead class="thead-inverse">
 					<tr>
 						<th data-column-id='no' data-type='numeric' data-identifier='true'
