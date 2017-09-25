@@ -87,9 +87,7 @@ public class Main {
 		public void configureGlobal(AuthenticationManagerBuilder auth) throws Exception {
 			auth
 			.inMemoryAuthentication()
-			.withUser("user").password("pass").roles("USER");
-			auth
-			.inMemoryAuthentication()
+			.withUser("user").password("pass").roles("USER").and()
 			.withUser("admin").password("pass").roles("ADMIN");
 		}
 
@@ -101,7 +99,7 @@ public class Main {
 	}
 
 
-/*	@RequestMapping(value = "signup",method = RequestMethod.GET)
+	/*	@RequestMapping(value = "signup",method = RequestMethod.GET)
 	String signup() {
 		return "signup";
 	}
@@ -119,7 +117,7 @@ public class Main {
 	    UserRepository.save(user);
 	    return "Signup";
 	}
-*/
+	 */
 
 	@RequestMapping("/signup")
 	String signup() {
@@ -152,7 +150,7 @@ public class Main {
 	String Account() {
 		return "Account";
 	}
-/*
+	/*
 	String Account(Map<String, Object> model) {
 		try (Connection connection = dataSource.getConnection()) {
 			Statement stmt = connection.createStatement();
@@ -170,7 +168,7 @@ public class Main {
 			return "error";
 		}
 	}
-*/
+	 */
 	@Bean
 	public DataSource dataSource() throws SQLException {
 		if (dbUrl == null || dbUrl.isEmpty()) {
