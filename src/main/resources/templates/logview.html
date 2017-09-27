@@ -1,11 +1,8 @@
 <!DOCTYPE html>
-<html>
+<html xmlns:th="http://www.thymeleaf.org" th:replace="~{fragments/layout :: layout (~{::body},'logview')}">
 <head>
 <meta charset="UTF-8">
 	<title>チャットボットログ</title>
-	<link href="/stylesheets/common.css" rel="stylesheet" />
-	<link href="/stylesheets/bootstrap.css" rel="stylesheet" />
-	<link href="/stylesheets/jquery.bootgrid.css" rel="stylesheet" />
 </head>
 <body>
 
@@ -32,10 +29,7 @@
 	<br>
 	<input id="btn_del" type="button" value="選択行の削除" onclick="drow()"  style="display:none">
 	<script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/1.8/jquery.js" th:src="@{//ajax.googleapis.com/ajax/libs/jquery/1.8/jquery.js}"></script>
-	<script type="text/javascript" src="/javascript/bootstrap.js" th:src="@{/javascript/bootstrap.js}"></script>
-	<script type="text/javascript" src="/javascript/jquery.bootgrid.js" th:src="@{/javascript/jquery.bootgrid.js}"></script>
-
-	<script>
+	<script th:inline="javascript">
 	var rowIds = [];
 	$(function() {
 		//alert("ｊｓはじまり");
@@ -53,14 +47,14 @@
 			multiSelect: true,
 			rowSelect: true,
 		    keepSelection: true,
-		}).on("selected.rs.$.bootgrid", function(e, rows)
+		}).on("selected.rs.jquery.bootgrid", function(e, rows)
 		{
 		    for (var i = 0; i < rows.length; i++)
 		    {
 		        rowIds.push(rows[i].no);
 		    }
 		    //alert("Select: " + rowIds.join(","));
-		}).on("deselected.rs.$.bootgrid", function(e, rows)
+		}).on("deselected.rs.jquery.bootgrid", function(e, rows)
 		{
 		    for (var i = 0; i < rows.length; i++)
 		    {
