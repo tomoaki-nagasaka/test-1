@@ -34,18 +34,18 @@
 	<script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/1.8/jquery.js" th:src="@{//ajax.googleapis.com/ajax/libs/jquery/1.8/jquery.js}"></script>
 	<script>
 	var rowIds = [];
-	$(function() {
+	jQuery(function() {
 		//alert("ｊｓはじまり");
-		//var h = $(window).height();
-		//$('#wrap').css('display','none');
-		//$('#loader-bg ,#loader').height(h).css('display','block');
+		//var h = jQuery(window).height();
+		//jQuery('#wrap').css('display','none');
+		//jQuery('#loader-bg ,#loader').height(h).css('display','block');
 
-		$('#btn_del').css('display', 'block');
+		jQuery('#btn_del').css('display', 'block');
 
 	});
 
-	$(window).load(function () { //全ての読み込みが完了したら実行
-		$('#grid_basic2').bootgrid({
+	jQuery(window).load(function () { //全ての読み込みが完了したら実行
+		jQuery('#grid_basic').bootgrid({
 			selection: true,
 			multiSelect: true,
 			rowSelect: true,
