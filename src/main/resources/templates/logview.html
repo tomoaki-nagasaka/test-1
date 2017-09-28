@@ -1,12 +1,12 @@
 <!DOCTYPE html>
 <html xmlns:th="http://www.thymeleaf.org">
-<head th:replace="layout :: base_header(~{::link},'チャットボットログ')">
+<head th:replace="fragments/layout :: base_header(~{::link},'チャットボットログ')">
   <link href="/stylesheets/jquery.bootgrid.css" rel="stylesheet" />
 </head>
 
 <body>
 
-<div th:replace="layout :: header"></div>
+<div th:replace="fragments/layout :: header"></div>
 
     <h1>チャットボットログ</h1>
 	<table id='grid-basic' class='table table-condensed table-hover table-striped'>
