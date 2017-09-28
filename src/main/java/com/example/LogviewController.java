@@ -5,7 +5,6 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
 import java.util.ArrayList;
-import java.util.HashMap;
 
 import javax.sql.DataSource;
 
@@ -27,8 +26,9 @@ public class LogviewController {
 			Statement stmt = connection.createStatement();
 			ResultSet rs = stmt.executeQuery("SELECT * FROM botlog ORDER BY NO");
 
-			HashMap map = new HashMap();
+			//HashMap map = new HashMap();
 			ArrayList output = new ArrayList();
+			/*
 			while (rs.next()) {
 				map.clear();
 				map.put("NO", rs.getString("NO"));
@@ -38,6 +38,7 @@ public class LogviewController {
 				map.put("RETURN", rs.getString("RETURN"));
 				output.add(map);
 			}
+			*/
 
 			model.put("records", output);
 			return "logview";
