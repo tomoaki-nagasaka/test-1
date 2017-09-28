@@ -50,10 +50,10 @@ public class LogviewController {
 			}
 
 
-			model.put("records", output);
+			model.addAttribute("records", output);
 			return "logview";
 		} catch (Exception e) {
-			model.put("message", e.getMessage());
+			model.addAttribute("message", e.getMessage());
 			return "error";
 		}
 		//model.addAttribute("message", "テストですよ");
