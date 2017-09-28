@@ -4,7 +4,8 @@ package com.example;
 public class LogviewController {
 
 	@RequestMapping("/logview")
-	String logview() {
+	String logview(Model model) {
+		model.addAttribute("message", "テストですよ");
 		return "logview";
 	}
 
