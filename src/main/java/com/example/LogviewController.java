@@ -57,7 +57,7 @@ public class LogviewController {
 			return "error";
 		}
 		//model.addAttribute("message", "テストですよ");
-		return "logview";
+		//return "logview";
 	}
 
 	@Bean
