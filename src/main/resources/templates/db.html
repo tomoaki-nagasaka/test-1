@@ -1,7 +1,11 @@
 <!DOCTYPE html>
-<html xmlns:th="http://www.thymeleaf.org" th:replace="~{fragments/layout :: layout (~{::body},'db')}">
+<html xmlns:th="http://www.thymeleaf.org">
+<head th:replace="fragments/layout :: base_header(~{::link},'DB')">
+  <link href="/stylesheets/jquery.bootgrid.css" rel="stylesheet" />
+</head>
 
 <body>
+<div th:replace="fragments/layout :: header"></div>
 <div class="container">
     <h1>Database Output</h1>
   <ul th:each="record : ${records}">
