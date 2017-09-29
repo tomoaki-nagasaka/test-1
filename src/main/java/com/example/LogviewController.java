@@ -40,6 +40,17 @@ public class LogviewController {
 			ArrayList output = new ArrayList();
 
 			while (rs.next()) {
+				BotlogEntity bte = new BotlogEntity();
+				bte.setNo(Integer.parseInt(rs.getString("NO")));
+				bte.setTime(rs.getString("TIME"));
+				bte.setUserid(rs.getString("USERID"));
+				bte.setContents(rs.getString("CONTENTS"));
+				bte.setReturnd(rs.getString("RETURN"));
+				output.add(bte);
+			}
+
+			/*
+			while (rs.next()) {
 				map.clear();
 				map.put("NO", rs.getString("NO"));
 				map.put("TIME", rs.getString("TIME"));
@@ -48,6 +59,7 @@ public class LogviewController {
 				map.put("RETURN", rs.getString("RETURN"));
 				output.add(map);
 			}
+			*/
 
 
 			model.addAttribute("records", output);
