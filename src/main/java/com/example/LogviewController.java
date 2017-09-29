@@ -75,8 +75,8 @@ public class LogviewController {
 		//return "logview";
 	}
 
-	@RequestMapping(value = "/logview",method = RequestMethod.POST)
-	String post(Model model) {
+	@RequestMapping(value = "/logview/postexc", params = "abc" , method = RequestMethod.POST)
+	String post() {
 		System.out.println("★★★★★★★★★★★★★★★★★★★★★きたよ★★★★★★★★★★★★★★★★★★★★★★★★★");
 		return "logview";
 
