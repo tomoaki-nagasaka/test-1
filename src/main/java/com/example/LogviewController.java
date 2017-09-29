@@ -37,7 +37,7 @@ public class LogviewController {
 			ResultSet rs = stmt.executeQuery("SELECT * FROM botlog ORDER BY NO");
 
 			HashMap map = new HashMap();
-			ArrayList output = new ArrayList();
+			ArrayList<BotlogEntity> output = new ArrayList<BotlogEntity>();
 
 			while (rs.next()) {
 				BotlogEntity bte = new BotlogEntity();
