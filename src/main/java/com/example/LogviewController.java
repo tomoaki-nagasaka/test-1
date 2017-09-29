@@ -42,7 +42,8 @@ public class LogviewController {
 			while (rs.next()) {
 				BotlogEntity bte = new BotlogEntity();
 				bte.setNo(Integer.parseInt(rs.getString("NO")));
-				bte.setTime(rs.getString("TIME"));
+				String time = rs.getString("TIME");
+				bte.setTime(time.substring(0,4) + "/" + time.substring(4,6) + "/" + time.substring(6,8) + " " + time.substring(8,10) + ":" + time.substring(10,12));
 				bte.setUserid(rs.getString("USERID"));
 				bte.setContents(rs.getString("CONTENTS"));
 				bte.setReturnd(rs.getString("RETURN"));
