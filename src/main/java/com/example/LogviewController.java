@@ -30,7 +30,7 @@ public class LogviewController {
 	@Autowired
 	private DataSource dataSource;
 
-	@RequestMapping("/logview")
+	@RequestMapping(value = "/logview",method = RequestMethod.GET)
 	String logview(Model model) {
 		System.out.println("★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★");
 		try (Connection connection = dataSource.getConnection()) {
@@ -72,6 +72,12 @@ public class LogviewController {
 		}
 		//model.addAttribute("message", "テストですよ");
 		//return "logview";
+	}
+
+	@RequestMapping(value = "/logview",method = RequestMethod.POST)
+	String post(Model model) {
+		return "logview";
+
 	}
 
 	@Bean
