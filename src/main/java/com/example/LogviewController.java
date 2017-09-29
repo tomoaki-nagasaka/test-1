@@ -77,6 +77,7 @@ public class LogviewController {
 
 	@RequestMapping(value = "/logview",method = RequestMethod.POST)
 	String post(Model model) {
+		System.out.println("★★★★★★★★★★★★★★★★★★★★★きたよ★★★★★★★★★★★★★★★★★★★★★★★★★");
 		return "logview";
 
 	}
