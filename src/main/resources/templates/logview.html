@@ -21,16 +21,11 @@
 		<tbody>
 
 			<tr th:each="record : ${records}">
-				<td>${records.NO}</td>
-
-			<!--
-			<tr>
-				<td>1</td>
-			-->
-				<td>${records.TIME}</td>
-				<td>${records.USERID}</td>
-				<td>${records.CONTENTS}</td>
-				<td>${records.RETURN}</td>
+				<td>${record.NO}</td>
+				<td>${record.TIME}</td>
+				<td>${record.USERID}</td>
+				<td>${record.CONTENTS}</td>
+				<td>${record.RETURN}</td>
 			</tr>
 		</tbody>
 	</table>
