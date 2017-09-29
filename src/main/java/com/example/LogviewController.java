@@ -37,10 +37,10 @@ public class LogviewController {
 			ResultSet rs = stmt.executeQuery("SELECT * FROM botlog ORDER BY NO");
 
 			HashMap map = new HashMap();
-			ArrayList<BotlogEntity> output = new ArrayList<BotlogEntity>();
+			ArrayList<test> output = new ArrayList<test>();
 
 			while (rs.next()) {
-				BotlogEntity bte = new BotlogEntity();
+				test bte = new test();
 				bte.setNo(Integer.parseInt(rs.getString("NO")));
 				bte.setTime(rs.getString("TIME"));
 				bte.setUserid(rs.getString("USERID"));
@@ -81,6 +81,55 @@ public class LogviewController {
 			config.setJdbcUrl(dbUrl);
 			return new HikariDataSource(config);
 		}
+	}
+
+	public class test {
+		private int no;
+		private String time;
+		private String userid;
+		private String contents;
+		private String returnd;
+
+		public void setNo(int no) {
+			this.no = no;
+		}
+
+		public int getNo() {
+			return no;
+		}
+
+		public void setTime(String time) {
+			this.time = time;
+		}
+
+		public String getTime() {
+			return time;
+		}
+
+		public void setUserid(String userid) {
+			this.userid = userid;
+		}
+
+		public String getUserid() {
+			return userid;
+		}
+
+		public void setContents(String contents) {
+			this.contents = contents;
+		}
+
+		public String getContents() {
+			return contents;
+		}
+
+		public void setReturnd(String returnd) {
+			this.returnd = returnd;
+		}
+
+		public String getReturnd() {
+			return returnd;
+		}
+
 	}
 
 }
