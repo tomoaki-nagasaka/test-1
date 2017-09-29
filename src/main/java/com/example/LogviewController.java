@@ -32,6 +32,7 @@ public class LogviewController {
 
 	@RequestMapping("/logview")
 	String logview(Model model) {
+		System.out.println("★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★");
 		try (Connection connection = dataSource.getConnection()) {
 			Statement stmt = connection.createStatement();
 			ResultSet rs = stmt.executeQuery("SELECT * FROM botlog ORDER BY NO");
