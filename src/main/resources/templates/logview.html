@@ -85,6 +85,7 @@
 
 			alert("選択行は" + rowIds.length + "行です");
 			for (var i = 0; i < rowIds.length; i++){
+				alert("POSTを実行します");
 				$.ajax({
 					type: "POST",
 					url: "delrow",
