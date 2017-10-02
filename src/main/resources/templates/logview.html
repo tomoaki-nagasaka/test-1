@@ -77,6 +77,10 @@
 	});
 
 	function drow() {
+		if(rowIds.length == 0){
+			alert("削除対象を選択してください");
+			return;
+		}
 		var myRet = confirm("選択行を削除しますか？");
 		if ( myRet == true ){
 			//document.forms["frm_del"].submit();
@@ -85,7 +89,7 @@
 			for (var i = 0; i < rowIds.length; i++){
 				$.ajax({
 					type: "POST",
-					url: "/logview",
+					url: "https://chatbotlog.herokuapp.com/logview",
 					data: "no=" + rowIds[i],
 				}).then(
 					function(){
