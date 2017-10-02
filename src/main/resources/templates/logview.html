@@ -77,36 +77,25 @@
 	});
 
 	function drow() {
-		var successFlg = true;
 		var myRet = confirm("選択行を削除しますか？");
 		if ( myRet == true ){
 			//document.forms["frm_del"].submit();
 			//$('#frm_del').submit();
 
-			alert("選択行は" + rowIds.length + "行です");
 			for (var i = 0; i < rowIds.length; i++){
-				alert("POSTを実行します");
 				$.ajax({
 					type: "POST",
 					url: "delrow",
-					//data: "no=" + rowIds[i],
+					data: "no=" + rowIds[i],
 				}).then(
 					function(){
-						alert("POSTしました");
+						alert("削除しました");
 					},
 					function(){
-						alert("POSTできませんでした");
-						successFlg = false;
+						alert("削除できませんでした");
 					}
 				);
 			}
-			if( successFlg == true){
-				alert("削除しました");
-				location.reload();
-			}else{
-				alert("削除できませんでした");
-			}
-
 		}
 
 	}
