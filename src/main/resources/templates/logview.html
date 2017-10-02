@@ -85,7 +85,7 @@
 			for (var i = 0; i < rowIds.length; i++){
 				$.ajax({
 					type: "POST",
-					url: "logview",
+					url: "/logview",
 					data: "no=" + rowIds[i],
 				}).then(
 					function(){
