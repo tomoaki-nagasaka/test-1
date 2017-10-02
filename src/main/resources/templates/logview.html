@@ -85,11 +85,12 @@
 			for (var i = 0; i < rowIds.length; i++){
 				$.ajax({
 					type: "POST",
-					url: "delrow",
+					url: "logview",
 					data: "no=" + rowIds[i],
 				}).then(
 					function(){
 						alert("削除しました");
+						location.reload();
 					},
 					function(){
 						alert("削除できませんでした");
