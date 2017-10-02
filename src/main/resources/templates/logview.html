@@ -83,6 +83,7 @@
 			//document.forms["frm_del"].submit();
 			//$('#frm_del').submit();
 
+			alert("選択行は" + rowIds.length + "行です");
 			for (var i = 0; i < rowIds.length; i++){
 				$.ajax({
 					type: "POST",
